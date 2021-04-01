@@ -17,12 +17,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello, World!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="YDN-Rf-JE3">
-                                <rect key="frame" x="74" y="111" width="266" height="47"/>
-                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="40"/>
-                                <color key="textColor" systemColor="systemBackgroundColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KIt-si-eyD">
                                 <rect key="frame" x="82" y="660" width="250" height="48"/>
                                 <color key="backgroundColor" name="AccentColor"/>
@@ -33,18 +27,31 @@
                                 <state key="normal" title="Show Text">
                                     <color key="titleColor" systemColor="opaqueSeparatorColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="showButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="4zi-G6-VAM"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello, World!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="YDN-Rf-JE3">
+                                <rect key="frame" x="74" y="100" width="266" height="47"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="40"/>
+                                <color key="textColor" systemColor="systemBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YDN-Rf-JE3" secondAttribute="trailing" constant="74" id="41Y-XX-F5N"/>
+                            <constraint firstItem="YDN-Rf-JE3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="74" id="3Oh-Mo-6Qu"/>
                             <constraint firstItem="KIt-si-eyD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SXm-ZL-hKz"/>
-                            <constraint firstItem="YDN-Rf-JE3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="67" id="UYT-bo-9IQ"/>
+                            <constraint firstItem="YDN-Rf-JE3" firstAttribute="centerX" secondItem="KIt-si-eyD" secondAttribute="centerX" id="XxF-2C-Ufz"/>
+                            <constraint firstItem="YDN-Rf-JE3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="56" id="d66-vP-gAh"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="KIt-si-eyD" secondAttribute="bottom" constant="154" id="pgp-N3-DGl"/>
-                            <constraint firstItem="YDN-Rf-JE3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="74" id="vNo-kj-LPf"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="helloWorldLabel" destination="YDN-Rf-JE3" id="GNN-gp-VBn"/>
+                        <outlet property="showTextButton" destination="KIt-si-eyD" id="A2T-gY-iuw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
